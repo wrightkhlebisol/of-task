@@ -4,11 +4,7 @@ export class ZonePair implements IZonePair {
   private readonly sortedZones: [IZone, IZone];
 
   constructor(public zone1: IZone, public zone2: IZone) {
-    if (zone1.id === zone2.id) {
-      throw new Error('Both zones must be different.');
-    }
     this.sortedZones = [zone1, zone2].sort((a, b) => a.id - b.id) as [IZone, IZone];
-
   }
 
   /**
