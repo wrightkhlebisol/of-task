@@ -3,6 +3,11 @@ import { IZone, IZonePair } from '../../interfaces/IZone.interface';
 export class ZonePair implements IZonePair {
   private readonly sortedZones: [IZone, IZone];
 
+  /**
+   * Creates a id sorted ZonePair instance with two zones.
+   * @param zone1 The first zone in the pair.
+   * @param zone2 The second zone in the pair.
+   */
   constructor(public zone1: IZone, public zone2: IZone) {
     this.sortedZones = [zone1, zone2].sort((a, b) => a.id - b.id) as [IZone, IZone];
   }

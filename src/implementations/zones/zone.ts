@@ -8,6 +8,10 @@ export class Zone implements IZone {
   }
 
   toString(): string {
-    return `Zone ${this.id}`;
+    return this.id.toString();
+  }
+
+  equals(other: IZone): boolean {
+    return this.id === other.id;
   }
 }
