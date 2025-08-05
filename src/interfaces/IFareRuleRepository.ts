@@ -1,5 +1,5 @@
-import { IZonePair } from "./IZone.interface";
-import { IFareRate, IFareCap } from "./IFare.interface";
+import { IZonePair } from "./IZone";
+import { IFareRate, IFareCap } from "./IFare";
 
 export interface IFareRuleRepository {
   getFareRate(zonePair: IZonePair): IFareRate;

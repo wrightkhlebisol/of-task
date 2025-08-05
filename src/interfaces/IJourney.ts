@@ -1,5 +1,5 @@
-import { ITravelDate, ITimeOfDay } from '../interfaces/Utils.interface';
-import { IZonePair, IZone } from './IZone.interface';
+import { ITravelDate, ITimeOfDay } from './Utils';
+import { IZonePair, IZone } from './IZone';
 
 /**
  * Interface representing a journey in the transportation system.
