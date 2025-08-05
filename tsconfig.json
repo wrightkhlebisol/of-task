@@ -10,6 +10,14 @@
     "skipLibCheck": true,
     "declaration": true,
     "declarationDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@domain/*": ["src/domain/*"],
+      "@services/*": ["src/services/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@utils/*": ["src/utils/*"],
+      "@implementations/*": ["src/implementations/*"]
+    }
   },
   "include": [
     "src/**/*.ts"

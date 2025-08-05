@@ -1,4 +1,8 @@
 import type { Config } from '@jest/types';
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { readFileSync } from 'fs';
+
+const compilerOptions = JSON.parse(readFileSync('./tsconfig.json', 'utf-8')).compilerOptions;
 
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
@@ -22,7 +26,8 @@ const config: Config.InitialOptions = {
     'src/**/*.ts',
     '!src/**/*.d.ts',
     '!src/index.ts',
-  ]
+  ],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
 };
 
 export default config;
