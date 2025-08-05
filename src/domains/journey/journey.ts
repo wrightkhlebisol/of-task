@@ -2,8 +2,8 @@ import { IJourney } from "../../interfaces/IJourney";
 import { IZonePair, IZone } from "../../interfaces/IZone";
 import { ITravelDate, ITimeOfDay } from "../../interfaces/Utils";
 
-import { TimeOfDay } from "../utils/time_of_day";
-import { TravelDate } from "../utils/travel_date";
+import { TimeOfDay } from "../../utils/time_of_day";
+import { TravelDate } from "../../utils/travel_date";
 import { ZonePair } from "../zones/zone_pair";
 import { Zone } from "../zones/zone";
 

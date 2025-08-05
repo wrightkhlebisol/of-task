@@ -1,7 +1,7 @@
 import { Journey, RawData } from "./journey";
 import { Zone } from "../zones/zone";
-import { TravelDate } from "../utils/travel_date";
-import { TimeOfDay } from "../utils/time_of_day";
+import { TravelDate } from "../../utils/travel_date";
+import { TimeOfDay } from "../../utils/time_of_day";
 
 describe('Journey', () => {
   const testDate = new TravelDate('2024-01-15');
