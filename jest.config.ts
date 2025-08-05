@@ -8,6 +8,11 @@ const config: Config.InitialOptions = {
     '**/__tests__/**/*.ts',
     '**/?(*.)+(spec|test).ts'
   ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist',
+    '/src/index.ts$'
+  ],
   transform: {
     '^.+\\.ts$': 'ts-jest'
   },
@@ -15,7 +20,8 @@ const config: Config.InitialOptions = {
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
     'src/**/*.ts',
-    '!src/**/*.d.ts'
+    '!src/**/*.d.ts',
+    '!src/index.ts',
   ]
 };
 
