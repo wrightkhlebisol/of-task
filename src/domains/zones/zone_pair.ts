@@ -1,4 +1,4 @@
-import { IZone, IZonePair } from '../../interfaces/IZone.interface';
+import { IZone, IZonePair } from '../../interfaces/IZone';
 
 export class ZonePair implements IZonePair {
   private readonly sortedZones: [IZone, IZone];

@@ -1,4 +1,4 @@
-import { IFareCap, IFare } from '../../interfaces/IFare.interface';
+import { IFareCap, IFare } from '../../interfaces/IFare';
 
 export class FareCap implements IFareCap {
   /**

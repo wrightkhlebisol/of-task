@@ -1,4 +1,4 @@
-import { ITimeOfDay } from "../../interfaces/Utils.interface";
+import { ITimeOfDay } from "../../interfaces/Utils";
 
 /**
  * TimeOfDay class represents a specific time of day in hours and minutes.

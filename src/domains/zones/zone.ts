@@ -1,4 +1,4 @@
-import { IZone } from '../../interfaces/IZone.interface';
+import { IZone } from '../../interfaces/IZone';
 
 export class Zone implements IZone {
   constructor(public id: number) {

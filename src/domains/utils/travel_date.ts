@@ -1,4 +1,4 @@
-import { ITravelDate } from '../../interfaces/Utils.interface';
+import { ITravelDate } from '../../interfaces/Utils';
 
 export class TravelDate implements ITravelDate {
   private readonly date: Date;

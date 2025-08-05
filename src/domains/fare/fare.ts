@@ -1,4 +1,4 @@
-import { IFare } from "../../interfaces/IFare.interface";
+import { IFare } from "../../interfaces/IFare";
 
 export class Fare implements IFare {
   constructor(

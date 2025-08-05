@@ -5,7 +5,7 @@ import { FareCap } from '../domains/fare/fare_cap';
 import { Fare } from '../domains/fare/fare';
 import { Zone } from '../domains/zones/zone';
 
-import { IFareRuleRepository } from '../interfaces/IFareRuleRepository.interface';
+import { IFareRuleRepository } from '../interfaces/IFareRuleRepository';
 
 describe('FareRuleRepository', () => {
   let repository: IFareRuleRepository;

@@ -1,9 +1,10 @@
 import { Fare } from '../domains/fare/fare';
 import { FareCap } from '../domains/fare/fare_cap';
 import { FareRate } from '../domains/fare/fare_rate';
-import { IFareRuleRepository } from '../interfaces/IFareRuleRepository.interface';
-import { IFareRate, IFareCap } from '../interfaces/IFare.interface';
-import { IZonePair } from '../interfaces/IZone.interface';
+
+import { IFareRuleRepository } from '../interfaces/IFareRuleRepository';
+import { IFareRate, IFareCap } from '../interfaces/IFare';
+import { IZonePair } from '../interfaces/IZone';
 
 /**
  * Repository for managing fare rules, including fare rates and caps.
@@ -46,7 +47,7 @@ export class FareRuleRepository implements IFareRuleRepository {
    * @returns The fare rate for the specified zone pair.
    * @throws Error if no fare rate is found for the zone pair.
    */
-  getFareRate(zonePair: IZonePair): FareRate {
+  getFareRate(zonePair: IZonePair): IFareRate {
     const rate = this.singleFareRates.get(zonePair.getZoneKey());
     if (!rate) {
       throw new Error(`No fare rate found for zones ${zonePair.getZoneKey()}`);

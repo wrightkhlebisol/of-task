@@ -1,4 +1,4 @@
-import { IFareRate, IFare } from "../../interfaces/IFare.interface";
+import { IFareRate, IFare } from "../../interfaces/IFare";
 
 export class FareRate implements IFareRate {
   constructor(
