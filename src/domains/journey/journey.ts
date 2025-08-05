@@ -1,6 +1,7 @@
 import { IJourney } from "../../interfaces/IJourney.interface";
 import { IZonePair, IZone } from "../../interfaces/IZone.interface";
 import { ITravelDate, ITimeOfDay } from "../../interfaces/Utils.interface";
+
 import { TimeOfDay } from "../utils/time_of_day";
 import { TravelDate } from "../utils/travel_date";
 import { ZonePair } from "../zones/zone_pair";

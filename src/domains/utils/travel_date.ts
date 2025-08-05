@@ -43,7 +43,7 @@ export class TravelDate implements ITravelDate {
    * Returns the date of the last Monday.
    * @returns TravelDate instance representing the last Monday.
    */
-  daysToMonday(): ITravelDate {
+  getWeekStart(): ITravelDate {
     const d = new Date(this.date);
     const dayOfWeek = d.getDay();
     const diff = dayOfWeek === 0 ? -6 : 1 - dayOfWeek; // Adjust if Sunday, make Monday the start of the week
