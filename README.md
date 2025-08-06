@@ -52,7 +52,6 @@ The project follows a three-tier architecture, separating concerns into:
    - **Journey**: Represents a passenger's journey, including zones and fare applied.
 3. **Application Layer**: Orchestration and factory layer, providing a simple interface for fare calculations and journey management.
    - **FareCalculationEngine**: The main entry point for fare calculations, coordinating between the domain and service layers.
-   - **Journey**: Represents a passenger's journey, including zones and fare applied.
    - **JourneyFactory**: Creates journeys from raw data, ensuring valid inputs.
    - **FareCalculationController**: Provides an API for fare calculations, handling requests and responses.
 
