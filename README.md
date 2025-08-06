@@ -29,12 +29,10 @@ The project follows a three-tier architecture, separating concerns into:
 1. **Domain Layer**: Contains the core business logic and entities with no dependencies, such as:
     - **Zone**: Represents a geographical area in the transportation system.
     - **ZonePair**: Represents a pair of zones for fare calculation.
-
     - **Fare**: Represents a fare amount integer.
     - **FareRate**: Represents a rule that applies to fare calculations, such as time-based or distance-based rules.
     - **FareCap**: Represents a cap on fares, such as daily or weekly caps.
     - **FareRule**: Represents rules that apply to fare calculations, such as time-based or distance-based rules.
-
     - **Journey**: Represents a journey taken by a passenger, including the zones traveled through and the fare applied.
 2. **Service Layer**: Business logic and rules are implemented here, coordinating between the domain layer and application layer. 
    This includes fare calculation services, zone analysis, and journey grouping.
@@ -44,16 +42,10 @@ The project follows a three-tier architecture, separating concerns into:
    - **WeeklyFareCalculator**: Calculates weekly fares with caps.
    - **ZoneAnalysisService**: Analyzes zones for fare calculations.
    - **JourneyGroupingService**: Groups journeys based on rules for fare calculations.
-   - **FareRateService**: Manages fare rates and rules.
-   - **FareCapService**: Manages fare caps for daily and weekly fares.
-   - **FareRuleService**: Manages fare rules and their application.
-   - **FareCalculationEngine**: Coordinates fare calculations across different services.
-   - **FareCalculationEngine**: The main entry point for fare calculations, coordinating between the domain and service layers.
-   - **Journey**: Represents a passenger's journey, including zones and fare applied.
+   - **FareRuleRepository**: Manages fare rules and their application.
 3. **Application Layer**: Orchestration and factory layer, providing a simple interface for fare calculations and journey management.
    - **FareCalculationEngine**: The main entry point for fare calculations, coordinating between the domain and service layers.
    - **JourneyFactory**: Creates journeys from raw data, ensuring valid inputs.
-   - **FareCalculationController**: Provides an API for fare calculations, handling requests and responses.
 
 ## Testing
 The project includes unit tests for individual components collocated in the same directory as the implementation, to ease access and improve maintainability, it also contains integration tests for the fare calculation engine.
@@ -63,6 +55,14 @@ Tests cover various scenarios, including:
 - Daily fare calculations with caps
 - Weekly fare calculations with caps
 - Edge cases such as invalid inputs and cross-week journeys
+- Zone analysis and fare rule application
+Tests are written using Jest, ensuring that all components function correctly and adhere to the expected behavior.
+### Running Tests
+To run the tests, use the following command:
+```bash
+npm run test:coverage
+```
+This will execute all unit and integration tests, providing coverage reports and ensuring that the fare calculation engine behaves as expected.
 
 ## Running the Project
 ### Prerequisites
