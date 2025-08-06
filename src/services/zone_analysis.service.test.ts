@@ -2,17 +2,17 @@ import { ZoneAnalysisService } from './zone_analysis.service';
 import { Journey } from '../domains/journey/journey';
 import { FareRuleRepository } from '../repositories/fare_rule.repository';
 
-import { IFareRuleRepository } from '../interfaces/IFareRuleRepository';
 import { IZoneAnalysisService } from '../interfaces/IZoneAnalysisService';
+import { PeakHourService } from './peak_hour.service';
 
 
 describe('ZoneAnalysisService', () => {
   let zoneAnalysisService: IZoneAnalysisService;
-  let fareRuleRepository: IFareRuleRepository;
 
   beforeEach(() => {
-    fareRuleRepository = new FareRuleRepository();
-    zoneAnalysisService = new ZoneAnalysisService(fareRuleRepository);
+    const fareRuleRepository = new FareRuleRepository();
+    const peakHourService = new PeakHourService();
+    zoneAnalysisService = new ZoneAnalysisService(fareRuleRepository, peakHourService);
   });
 
   test('should find highest zone pair', () => {

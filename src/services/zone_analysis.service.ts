@@ -1,7 +1,7 @@
 import { IZonePair } from '@interfaces/IZone';
-import { IFareRuleRepository } from '@interfaces/IFareRuleRepository';
 import { IJourney } from '@interfaces/IJourney';
-import { PeakHourService } from './peak_hour.service';
+import { IPeakHourService } from '@interfaces/IPeakHour';
+import { IFareRuleRepository } from '@interfaces/IFareRuleRepository';
 import { IZoneAnalysisService } from '@interfaces/IZoneAnalysisService';
 
 /**
@@ -10,7 +10,8 @@ import { IZoneAnalysisService } from '@interfaces/IZoneAnalysisService';
  */
 export class ZoneAnalysisService implements IZoneAnalysisService {
   constructor(
-    private readonly fareRuleRepository: IFareRuleRepository
+    private readonly fareRuleRepository: IFareRuleRepository,
+    private readonly peakHourService: IPeakHourService
   ) { }
   /**
    * Get the highest zone pair from a list of journeys.
@@ -29,7 +30,7 @@ export class ZoneAnalysisService implements IZoneAnalysisService {
     for (const journey of journeys) {
       const currentPair = journey.getZonePair();
       const currentFareRate = this.fareRuleRepository.getFareRate(currentPair);
-      const currentIsPeak = PeakHourService.isPeakHour(journey.date, journey.time);
+      const currentIsPeak = this.peakHourService.isPeakHour(journey.date, journey.time);
 
       const currentFareAmount = currentFareRate.getFare(currentIsPeak).amount;
 
