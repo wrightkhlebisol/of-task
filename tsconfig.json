@@ -12,11 +12,13 @@
     "declarationDir": "./dist",
     "baseUrl": ".",
     "paths": {
-      "@domain/*": ["src/domain/*"],
-      "@services/*": ["src/services/*"],
+      "@domains/*": ["src/domains/*"],
+      "@engines/*": ["src/engines/*"],
+      "@factories/*": ["src/factories/*"],
       "@interfaces/*": ["src/interfaces/*"],
-      "@utils/*": ["src/utils/*"],
-      "@implementations/*": ["src/implementations/*"]
+      "@repositories/*": ["src/repositories/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": [

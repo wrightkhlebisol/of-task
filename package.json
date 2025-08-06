@@ -4,6 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:all": "jest --selectProjects unit integration",
+    "test:all:watch": "jest --selectProjects unit integration --watch",
+    "test:all:coverage": "jest --selectProjects unit integration --coverage",
+    "test:unit": "jest --selectProjects unit",
+    "test:integration": "jest --selectProjects integration",
+    "test:unit:watch": "jest --selectProjects unit --watch",
+    "test:unit:coverage": "jest --selectProjects unit --coverage",
     "build": "npm run build:clean && tsc",
     "build:clean": "tsc --build --clean && rm -rf dist",
     "test:watch": "jest --watch",
@@ -15,10 +22,12 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@jest/types": "^30.0.5",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.1.0",
     "jest": "^30.0.5",
     "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }
