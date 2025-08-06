@@ -30,14 +30,14 @@ describe('TravelDate', () => {
 
   test('should get week start (Monday)', () => {
     const wednesday = new TravelDate('2024-01-17');
-    const weekStart = wednesday.daysToMonday();
+    const weekStart = wednesday.getWeekStart();
 
     expect(weekStart.toString()).toBe('2024-01-15'); // Monday
   });
 
   test('should handle Sunday correctly for week start', () => {
     const sunday = new TravelDate('2024-01-14');
-    const weekStart = sunday.daysToMonday();
+    const weekStart = sunday.getWeekStart();
 
     expect(weekStart.toString()).toBe('2024-01-08'); // Previous Monday
   });
